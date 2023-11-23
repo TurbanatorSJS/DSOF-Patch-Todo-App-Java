@@ -22,7 +22,7 @@ spec:
         name: java-goof
         livenessProbe: true
         resources:
-          requests:
+          limits:
               memory: "64Mi"
               cpu: "250m"
         securityContext:
