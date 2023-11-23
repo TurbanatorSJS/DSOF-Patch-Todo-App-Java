@@ -25,6 +25,7 @@ spec:
           allowPrivilegeEscalation: false
           privileged: false
           runAsNonRoot: true
+          runAsUser: 10000000
       restartPolicy: Always
 ---
 apiVersion: v1
