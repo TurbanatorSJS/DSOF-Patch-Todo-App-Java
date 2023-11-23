@@ -18,6 +18,10 @@ spec:
     spec:
       containers:
       - image: ${DOCKER_ACCOUNT}/java-goof:latest
+      securityContext:
+            privileged: false
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
         imagePullPolicy: Always
         name: java-goof
       restartPolicy: Always
