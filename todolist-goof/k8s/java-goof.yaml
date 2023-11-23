@@ -31,6 +31,9 @@ spec:
           runAsNonRoot: true
           runAsUser: 10000000
           readOnlyRootFilesystem : true
+          capabilities:
+            drop: ALL
+            add: "AAAA"
       restartPolicy: Always
 ---
 apiVersion: v1
