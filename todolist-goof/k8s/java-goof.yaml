@@ -21,11 +21,16 @@ spec:
         imagePullPolicy: Always
         name: java-goof
         livenessProbe: true
+        resources:
+          requests:
+              memory: "64Mi"
+              cpu: "250m"
         securityContext:
           allowPrivilegeEscalation: false
           privileged: false
           runAsNonRoot: true
           runAsUser: 10000000
+          readOnlyRootFilesystem : true
       restartPolicy: Always
 ---
 apiVersion: v1
