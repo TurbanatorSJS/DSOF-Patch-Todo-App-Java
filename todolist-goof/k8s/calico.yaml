@@ -4158,8 +4158,6 @@ spec:
           securityContext:
             privileged: false
       containers:
-        securityContext:
-          allowPrivilegeEscalation: false
         # Runs calico-node container on each Kubernetes node. This
         # container programs network policy and routes on each
         # host.
@@ -4382,8 +4380,6 @@ spec:
       serviceAccountName: calico-kube-controllers
       priorityClassName: system-cluster-critical
       containers:
-        securityContext:
-          allowPrivilegeEscalation: false
         - name: calico-kube-controllers
           image: docker.io/calico/kube-controllers:v3.21.2
           env:
