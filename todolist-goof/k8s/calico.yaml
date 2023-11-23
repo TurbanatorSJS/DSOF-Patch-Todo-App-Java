@@ -3783,6 +3783,8 @@ kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: calico-kube-controllers
+  securityContext: 
+    allowPrivilegeEscalation: false
 rules:
   # Nodes are watched to monitor for deletions.
   - apiGroups: [""]
